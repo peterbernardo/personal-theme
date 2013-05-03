@@ -8260,6 +8260,7 @@ article footer {
 }
 #bio {
   font-size: .9em;
+  line-height: 18px;
   margin: 10px;
   border-bottom: 1px solid #787878;
 }
@@ -8402,6 +8403,7 @@ h5 {
 }
 ul.where-else {
   padding: 0 10px;
+  margin: 5px 4px 0 0;
   float: right;
 }
 ul.where-else li {
@@ -8414,6 +8416,24 @@ ul.where-else li a:link {
 }
 ul.where-else li a:hover {
   color: #45D49B;
+}
+.quote {
+  padding-left: 8px;
+  color: #646464;
+}
+.quote a {
+  font-family: "Arvo", Georgia, "Times New Roman", Times, serif;
+  font-size: 2.2em;
+  line-height: 1.05em;
+  color: #646464;
+  text-decoration: none;
+}
+.quote a:hover {
+  color: #45D49B;
+}
+.quote .small {
+  font-size: .8em;
+  color: #646464;
 }
 /* =Gallery listing
 -------------------------------------------------------------- */
@@ -9080,5 +9100,8 @@ code {
   }
   .my-wrapper {
     display: none;
+  }
+  .quote a {
+    font-size: 1.2em;
   }
 }

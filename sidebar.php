@@ -29,6 +29,7 @@
 						<li class="instagram"><a href="http://www.instagram.com/petebernardo/" rel="tooltip" title="instagram.com/petebernardo"><i class="icon-camera-retro"></i></a></li>
 					</ul>
 				</aside>
+				<aside class="quote"><a href="https://twitter.com/jack/status/17680161621151744" rel="tooltip" data-toggle="tooltip" title="What I believe in.">Make every detail perfect and limit the number of details to perfect.<br/></a><span class="small">- @jack</span></aside>
 
 			<?php endif; // end sidebar widget area ?>
 		</div><!-- #secondary .widget-area -->
