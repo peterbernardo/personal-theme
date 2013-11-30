@@ -21,7 +21,7 @@
 			<hgroup>
 				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			</hgroup>
-			<div class="byline hidden-desktop hidden-tablet">by <?php the_author_link();?> on <?php echo get_the_date(); ?></div>
+			<div class="byline visible-xs">by <?php the_author_link();?> on <?php echo get_the_date(); ?></div>
 
 		</header><!-- .entry-header -->
 
@@ -31,8 +31,8 @@
 		</div>
 		<footer>
 			<div class="row">
-			<div class="span6 meta-info">
-</div>				<div class="span3 meta-comments">			
+			<div class="col-sm-6 meta-info">
+</div>				<div class="col-sm-6 meta-comments">			
 				<?php if ( comments_open() && ! post_password_required() ) : ?>
 			<div class="comments-link">
 				<?php comments_popup_link( '<span class="leave-reply">' . __( "Leave Comment" ) . '</span>', _x( '1', 'comments number' ), _x( '%', 'comments number' ) ); ?>

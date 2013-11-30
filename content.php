@@ -22,11 +22,11 @@
 					<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 					
 				</hgroup>
-							<div class="byline hidden-desktop hidden-tablet">by <?php the_author_link();?> on <?php echo get_the_date(); ?></div>
+							<div class="byline visible-xs">by <?php the_author_link();?> on <?php echo get_the_date(); ?></div>
 
 			<?php else : ?>
 			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-										<div class="byline hidden-desktop hidden-tablet">by <?php the_author_link();?> on <?php echo get_the_date(); ?></div>
+										<div class="byline visible-xs">by <?php the_author_link();?> on <?php echo get_the_date(); ?></div>
 
 			<?php endif; ?>
 

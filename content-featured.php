@@ -32,8 +32,8 @@ global $feature_class;
 
 		<footer>
 			<div class="row">
-			<div class="span6 meta-info">
-</div>				<div class="span3 meta-comments">			
+			<div class="col-sm-6 meta-info">
+</div>				<div class="col-sm-6 meta-comments">			
 				<?php if ( comments_open() && ! post_password_required() ) : ?>
 			<div class="comments-link">
 				<?php comments_popup_link( '<span class="leave-reply">' . __( "Leave Comment" ) . '</span>', _x( '1', 'comments number' ), _x( '%', 'comments number' ) ); ?>

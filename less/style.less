@@ -12,31 +12,37 @@ Description:
 @import url('http://fonts.googleapis.com/css?family=Arvo');
 
 @import "bootstrap.less";
-@import "responsive.less";
 
-
-@boxShadow: 	1px 1px 20px #333;
-@boxRadius: 	0px;
+@boxShadow: 		1px 1px 20px #333;
+@boxRadius: 		0px;
 @boxRadiusBottom: 	0px;
-@meta:			#333;
-@textShadow:	1px 1px 2px #999;
-@green:	#45d49b;
+@meta:				#333;
+@textShadow:		1px 1px 2px #999;
+@text-color : 		#FFF;
+@white: 			#FFF;
+@green:				#45d49b;
+@bodyBackground:	#6c6c6c;
+@linkColor:			#f2f2f2;
+
+@baseFontFamily: 	"Open Sans", Helvetica, Arial, sans-serif;
+@altFontFamily: 	"Arvo", Georgia, "Times New Roman", Times, serif;
 
 body {
   //margin: 20px;
   font-family: @baseFontFamily;
-  font-size: @baseFontSize;
-  line-height: @baseLineHeight;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
   font-weight: 300;
-  color: @textColor;
+  color: @text-color;
   padding: 0 20px 0 0;
   //background: url(assets/img/grey.png);
   //background: @bodyBackground url(assets/img/petebernardo_bg.png) no-repeat top left;
   background-attachment: fixed;
+  background-color: #525252;
 }
 .top_nav{
-	background: url(assets/img/green-bg.png) repeat-x;
-	height: 40px;
+	background: @green;
+	height: 10px;
 	width: 100%;
 	position: fixed;
 	z-index: 99;
@@ -44,10 +50,11 @@ body {
 #branding {
 	text-align: center;
 	.bio-img{
-	.border-radius(80px);height:80px; width:80px; border:4px solid white; overflow:hidden;margin: 0 auto -10px;}
-	img{margin-top: -15px;}
-	h1{font-size:1.5em;font-weight: 400;color: #7A7A7A;}
-	.bold{font-weight: 600;color: @white;}
+	border-radius:80px;
+	height:80px; width:80px; border:4px solid white; overflow:hidden;margin: 0 auto -10px;}
+	img{margin-top: -15px;width:100%;}
+	h1{font-size:1.7em;font-weight: 400;color: #7A7A7A;}
+	.bold{color: @white;}
 	a, a:link{text-decoration: none;}
 	a:hover span.bold{color:@green;}
 }
@@ -104,10 +111,12 @@ article {
 	.clearfix ();
 	header{
 	padding: 10px 0;
+	margin-top: 20px;
 	}
 	footer{
 		border-top: 1px solid lighten(@bodyBackground,15);
 		margin: 20px 0 0;
+		padding: 10px 0;
 	}
 }
 
@@ -139,7 +148,7 @@ article {
 	max-width: 112%;
 	width: 112%;
 	margin-left: -12%;
-	.border-radius(@boxRadiusBottom);
+	border-radius: @boxRadiusBottom;
 	.box-shadow(@boxShadow);
 }
 .cat_icon{
@@ -158,9 +167,9 @@ article {
 	//#gradient > .vertical(@meta,darken(@meta, 10%)) ;
 	height: auto;
 	position: absolute;
-	margin-left: -85px;
-	width: 40px;
-	padding: 10px;
+	margin:20px 0 0 -83px;
+	width: 50px;
+	padding: 10px 0;
 	text-align: center;
 	text-transform: uppercase;
 	z-index: 100;
@@ -180,17 +189,17 @@ font-size: 1.3em;
 //box-shadow: 0px 0px 0px 5px rgba(256,256,256,.5);
 //border-radius: 50%;
 }
-.meta .arrow.icon-bolt{
+.meta .arrow.fa-bolt{
 	left: 60px;
-font-size: 1.5em;
+	font-size: 1.5em;
 }
-.meta .arrow.icon-lightbulb{
+.meta .arrow.fa-lightbulb{
 	left: 58px;
-font-size: 1.5em;
+	font-size: 1.5em;
 }
-.meta .date {color:@white;display: block; padding-bottom: 10px;padding-top: 15px;}
-.meta .date .month {letter-spacing: 1px;font-size: .9em;padding-left: 4px;}
-.meta .date .day {font-size: 1.4em; margin-top: 4px;}
+.meta .date {color:@white;display: block; padding-bottom: 10px;padding-top: 15px;width:50px;text-align: center;}
+.meta .date .month {letter-spacing: 1px;font-size: .9em;width:50px;}
+.meta .date .day {font-size: 1.4em; margin-top: 4px;width:50px;}
 .meta-info{
 	a,a:link{text-decoration: none;}
 }
@@ -225,7 +234,6 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: @linkColorHover;
   font-weight: 300; 
   text-decoration: none;
   color: @green;
@@ -248,13 +256,17 @@ ul.where-else  {
 	padding: 0 10px;
 	margin: 5px 4px 0 0;
 	float: right;
-	li { float: left; 
+	li { float: left; padding: 0 6px 0 0;
 		a, a:link { text-decoration: none; color: #3C3C3C;}
 		a:hover {color: #45D49B;}
 		}
 	}
 	
-.quote {padding-left:8px; color:#646464; a{font-family: @altFontFamily;font-size: 2.2em;line-height: 1.05em;color:#646464;text-decoration: none;}a:hover {color: #45D49B;} .small{font-size: .8em; color:#646464;}}
+.quote {
+	padding-left:8px; color:#646464; 
+	a{font-family: @altFontFamily;font-weight:400;font-size: 2.2em;line-height: 1.05em;color:#646464;text-decoration: none;&:hover {color: #45D49B;} }
+	
+	.small{font-size: .8em; color:#646464;}}
 //WORDPRESS 
 
 
@@ -864,7 +876,7 @@ code {
 	max-width: 100%;
 	width: 100%;
 	margin-left: 0;
-	.border-radius(@boxRadiusBottom);
+	border-radius: @boxRadiusBottom;
 	.box-shadow(@boxShadow);
 	
 }
